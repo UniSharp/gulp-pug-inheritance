@@ -27,7 +27,7 @@ const gulp = require('gulp');
 const pug = require('gulp-pug');
 const pugInheritance = require('@unisharp/gulp-pug-inheritance');
 
-gulp.tack('watch-pug', () => {
+gulp.task('watch-pug', () => {
     return gulp.watch('resources/pug/**/*.pug', e => {
         gulp.src(e.path, { base: 'resources/pug' })
             .pipe(pugInheritance('resources/pug/**/*.pug'))
